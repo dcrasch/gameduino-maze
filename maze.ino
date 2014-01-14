@@ -3,8 +3,8 @@
 #include <GD2.h>
 
 /* MAZE */
-#define WIDTH 50
-#define HEIGHT 30
+#define WIDTH 48
+#define HEIGHT 24
 #define LEFT 240 - WIDTH * 4
 #define TOP 136 - HEIGHT * 4
 
@@ -214,7 +214,10 @@ void drawmaze() {
   byte row, col;
 
   for (row = 0; row < HEIGHT; row++) {
+    GD.ColorRGB(55 + 200 / HEIGHT * row, 0, 0);
+
     for (col = 0; col < WIDTH; col++) {
+
       c = 3 - maze[row][col] & 3;
       GD.Vertex2ii(LEFT + col * 8, TOP + row * 8, c);
     }
@@ -257,5 +260,4 @@ void loop()
     visitedcol = 0;
   }
   drawmaze();
-
 }
