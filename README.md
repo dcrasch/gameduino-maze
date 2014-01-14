@@ -6,7 +6,7 @@ Generates a 50x30 maze using the depth first search method
 Requirements
 ============
 
-http://gameduino2.com/
+http://gameduino.com/
 
 Usage
 =====
